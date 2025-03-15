@@ -1,0 +1,298 @@
+/* Đảm bảo trang chiếm toàn bộ chiều cao màn hình */
+html, body {
+    height: 100%; /* Chiều cao 100% màn hình */
+    margin: 0;
+    padding: 0;
+}
+
+/* Nội dung chính */
+main {
+    flex: auto; /* Đẩy footer xuống khi nội dung ít */
+}  
+
+/* Tổng thể */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+  
+/* Header */
+/* Header tổng thể */
+.header {
+    display: flex;
+    align-items: center; /* Căn giữa các thành phần theo chiều dọc */
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  /* Phần logo */
+  .logo-container {
+    margin-right: 15px; /* Khoảng cách giữa logo và tiêu đề */
+  }
+  
+  .logo-small {
+    width: 50px; /* Chiều rộng của logo */
+    height: auto; /* Giữ tỉ lệ gốc của logo */
+    border-radius: 5px; /* Bo tròn nếu cần */
+  }
+  
+  /* Tiêu đề header */
+  .header-title {
+    flex-grow: 1; /* Đẩy các thành phần khác ra xa, nếu cần */
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Menu */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Khoảng cách giữa các mục menu */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .menu li a:hover {
+    text-decoration: underline;
+  }
+  
+/* Section */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+/* Lưới sản phẩm */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 5 sản phẩm trên mỗi hàng */
+    gap: 30px; /* Khoảng cách giữa các sản phẩm */
+    margin: 25px 10;
+  }
+
+  .product-list:has(> .product:nth-child(-n+2)) {
+    justify-content: center; /* Căn giữa nếu chỉ có 2 sản phẩm trên hàng */
+  }
+  
+/* Box sản phẩm */
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Căn chỉnh nội dung trong box */
+    text-align: center; /* Căn giữa nội dung chữ */
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Đảm bảo các box sản phẩm có cùng chiều cao */
+  }
+  
+  /* Tiêu đề sản phẩm */
+  .product h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    line-height: 1.5; /* Khoảng cách dòng để chữ dễ đọc */
+    word-wrap: break-word; /* Chữ dài sẽ tự xuống dòng */
+  }
+  
+  /* Giá sản phẩm */
+  .product p {
+    font-size: 14px;
+    color: #007BFF;
+    margin: 5px 0;
+    word-wrap: break-word; /* Ngắt dòng khi chữ quá dài */
+  }
+  
+  /* Nút mua hàng */
+  .btn-buy {
+    margin-top: auto; /* Đẩy nút xuống cuối box */
+    padding: 10px 20px;
+    background-color: #13f344;
+    color: rgb(253, 250, 244);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .btn-buy:hover {
+    background-color: #21c0f0;
+  }
+
+  /* Logo sản phẩm */
+.product-logo {
+    max-width: 100px; /* Chiều rộng tối đa của logo */
+    max-height: 100px; /* Chiều cao tối đa của logo */
+    width: auto; /* Tự động điều chỉnh chiều rộng để giữ tỷ lệ */
+    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+    margin: 0 auto; /* Căn giữa logo trong box */
+    display: block;
+  }  
+  
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.gioi-thieu-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa ảnh và văn bản */
+    justify-content: center;
+    flex-wrap: wrap; /* Đảm bảo hiển thị đẹp trên màn hình nhỏ */
+}
+  
+.gioi-thieu-img {
+    width: auto; /* Chiều rộng của ảnh */
+    height: auto; /* Giữ tỉ lệ ảnh gốc */
+    border-radius: 10px; /* Bo tròn góc ảnh */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+  
+.logo-container {
+    display: inline-block; /* Hiển thị logo và nội dung cạnh nhau */
+    margin-right: 15px; /* Khoảng cách giữa logo và tiêu đề */
+    vertical-align: middle;
+}
+  
+.logo-small {
+    width: 50px; /* Chiều rộng của logo nhỏ */
+    height: auto; /* Giữ tỷ lệ logo gốc */
+    border-radius: 5px; /* Bo tròn góc nếu cần */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+}
+
+/* Nút mua hàng */
+.btn-buy {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Màu xanh lá cho nút */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-buy:hover {
+    background-color: #218838; /* Màu đậm hơn khi hover */
+  }
+
+  /* Popup tổng thể */
+.popup {
+    display: none; /* Ẩn popup mặc định */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Nội dung popup */
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Nút đóng */
+  .btn-close {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .btn-close:hover {
+    background-color: #0056b3;
+  }
+  
+  /* QR Code */
+  .qr-code img {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 sản phẩm trên mỗi hàng cho màn hình nhỏ */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-grid {
+      grid-template-columns: 1fr; /* 1 sản phẩm trên mỗi hàng cho màn hình rất nhỏ */
+    }
+  }
+
+  /* Nút chuyển đến trang sản phẩm */
+.btn-navigate {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Màu xanh dương */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-navigate:hover {
+    background-color: #0056b3; /* Màu đậm hơn khi hover */
+  }
+  
+  /* Phần mạng xã hội */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Khoảng cách giữa các nút */
+    margin-top: 20px;
+  }
+  
+  .btn-social img {
+    width: 50px; /* Chiều rộng của biểu tượng */
+    height: 50px; /* Chiều cao của biểu tượng */
+    border-radius: 50%; /* Biểu tượng hình tròn */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-social img:hover {
+    transform: scale(1.1); /* Phóng to khi hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+  }
+  

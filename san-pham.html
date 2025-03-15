@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới Thiệu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="D:\Onlineshop.com\picture\gioi-thieu\logo_main.png" alt="Logo nhỏ" class="logo-small">
+    </div>
+    <h1 class="header-title">ITD - SERVICE DISCORD</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+        <li><a href="san-pham.html">Sản Phẩm</a></li>
+      </ul>
+    </nav>
+  </header>  
+  <main>
+    <main>
+      <section id="san-pham" class="section">
+        <h2>Danh Sách Sản Phẩm</h2>
+        <div class="product-grid">
+          <!-- Nitro 1M -->
+          <div class="product">
+            <img src="D:\Onlineshop.com\picture\san-pham\Nitro_login_1M.jpg" alt="Nitro Login 1M" class="product-logo">
+            <h3>Nitro Login 1M</h3>
+            <p>Giá: 105.000 VND</p>
+            <button class="btn-buy" onclick="openPopup('Nitro Login 1M', 105000)">Mua hàng</button>
+          </div>
+  
+          <!-- Nitro 2M -->
+          <div class="product">
+            <img src="D:\Onlineshop.com\picture\san-pham\Nitro_login_1M.jpg" alt="Nitro Login 12M" class="product-logo">
+            <h3>Nitro Login 12M</h3>
+            <p>Giá: 300.000 VND</p>
+            <button class="btn-buy" onclick="openPopup('Nitro Login 12M', 300000)">Mua hàng</button>
+          </div>
+          
+          <!-- Youtube Premium -->
+          <div class="product">
+            <img src="D:\Onlineshop.com\picture\san-pham\Youtube_premium.webp" alt="Youtube Premium 6M" class="product-logo">
+            <h3>Youtube Premium 6M</h3>
+            <p>Giá: 300.000 VND</p>
+            <button class="btn-buy" onclick="openPopup('Youtube Premium 6M', 300000)">Mua hàng</button>
+          </div>
+           
+          <!-- Youtube Premium -->
+          <div class="product">
+            <img src="D:\Onlineshop.com\picture\san-pham\Youtube_premium.webp" alt="Youtube Premium 12M" class="product-logo">
+            <h3>Youtube Premium 12M</h3>
+            <p>Giá: 300.000 VND</p>
+            <button class="btn-buy" onclick="openPopup('Youtube Premium 12M', 300000)">Mua hàng</button>
+          </div>
+
+          <!-- Netflix -->
+          <div class="product">
+            <img src="D:\Onlineshop.com\picture\san-pham\Netflix.png" alt="Netflix Premium" class="product-logo">
+            <h3>Netflix Premium</h3>
+            <p>Giá: 300.000 VND</p>
+            <button class="btn-buy" onclick="openPopup('Netflix Premium', 300000)">Mua hàng</button>
+          </div>
+</div>
+      </section>
+    </main>
+  
+    <!-- Popup Thanh Toán -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h3>Thanh Toán</h3>
+        <p>Tên sản phẩm: <span id="product-name"></span></p>
+        <p>Giá tiền: <span id="product-price"></span> VND</p>
+        <p>Quét mã QR bên dưới để thanh toán:</p>
+        <div class="qr-code">
+          <img src="D:\Onlineshop.com\picture\qr.png" alt="Mã QR thanh toán">
+        </div>
+        <button class="btn-close" onclick="closePopup()">Đóng</button>
+      </div>
+    </div>
+  
+    <script src="script.js"></script>
+  </main>
+  <footer class="footer">
+    <p>Bản quyền © 2025 Web Bán Hàng Online. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
